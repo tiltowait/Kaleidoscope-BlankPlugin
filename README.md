@@ -1,6 +1,36 @@
 # Kaleidoscope-MyPlugin
 
-A blank plugin template for [Kaleidoscope](https://github.com/keyboardio/Kaleidoscope). Provides everything needed to easily get started writing a new plugin.
+A blank plugin template for [Kaleidoscope](https://github.com/keyboardio/Kaleidoscope). Provides everything needed to easily get started writing a new plugin, including a utility for rapid rename.
+
+## `rename.sh`
+
+`rename.sh` is a special utility for easily and quickly renaming your files, changing the plugin name, adding author credit, and inserting a description. It uses the following syntax:
+
+```
+./rename.sh <new_plugin_name> [Author] [Description]
+```
+
+### `new_plugin_name`
+
+The name of the new plugin. Note that this *must* be a single word. Also, you should omit the `Kaleidoscope-` prefix; it will be added for you where necessary.
+
+* **Good:** `AutoShift`
+* **Bad:** `Auto Shift`
+
+Your plugin [files](#files) will be renamed to fit the specified plugin name. For instance, `Kaleidoscope-MyPlugin.h` will become `Kaleidoscope-AutoShift.h`.
+
+### `Author`
+
+An optional argument, `Author` will replace the `<AUTHOR>` line near the beginning of each file. Additionally, `Author` should be enclosed in spaces if it's longer than one word.
+
+* **Good:** `"Billy Sanchez"`
+* **Bad:** `Billy Sanchez`
+
+If you don't use quotes, `Author` will simply become `Billy`, leaving `Sanchez` for [`Description`](#description).
+
+### `Description`
+
+Another optional argument, this one behaves much the same as [`Author`](#author), only it replaces the `<DESCRIPTION>` tag in the plugin files.
 
 ## Files
 

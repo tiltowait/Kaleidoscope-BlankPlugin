@@ -6,7 +6,7 @@ A blank plugin template for [Kaleidoscope](https://github.com/keyboardio/Kaleido
 
 `rename.sh` is a special utility for easily and quickly renaming your files, changing the plugin name, adding author credit, and inserting a description. It uses the following syntax:
 
-```
+```shell
 ./rename.sh <new_plugin_name> [Author] [Description]
 ```
 

@@ -25,13 +25,21 @@ namespace plugin {
 
 class MyPlugin : public kaleidoscope::Plugin {
   public:
-    // Plugin hooks. Delete what you don't need.
+    // Basic plugin status functions.
+    static void enable();
+    static void disable();
+    static void active();
+
+    // Event handlers. Delete what you don't need.
     EventHandlerResult onSetup();
     EventHandlerResult beforeEachCycle();
     EventHandlerResult onKeyswitchEvent(Key &mapped_key, byte row, byte col,
                                         uint8_t key_state);
     EventHandlerResult beforeReportingState();
     EventHandlerResult afterEachCycle();
+  
+  private:
+    static bool disabled_;
 };
 
 

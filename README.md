@@ -14,17 +14,17 @@ A blank plugin template for [Kaleidoscope](https://github.com/keyboardio/Kaleido
 
 The name of the new plugin. Note that this *must* be a single word. Also, you should omit the `Kaleidoscope-` prefix; it will be added for you where necessary.
 
-* **Good:** `AutoShift`
-* **Bad:** `Auto Shift`
+- **Good:** `FooBar`
+- **Bad:** `Foo Bar`, `Kaleidoscope-FooBar`
 
-Your plugin [files](#files) will be renamed to fit the specified plugin name. For instance, `Kaleidoscope-MyPlugin.h` will become `Kaleidoscope-AutoShift.h`.
+Your plugin [files](#files) will be renamed to fit the specified plugin name. For instance, `Kaleidoscope-MyPlugin.h` will become `Kaleidoscope-FooBar.h`.
 
 ### `Author`
 
 An optional argument, `Author` will replace the `<AUTHOR>` line near the beginning of each file. Additionally, `Author` should be enclosed in spaces if it's longer than one word.
 
-* **Good:** `"Billy Sanchez"`
-* **Bad:** `Billy Sanchez`
+- **Good:** `"Billy Sanchez"`
+- **Bad:** `Billy Sanchez`
 
 If you don't use quotes, `Author` will simply become `Billy`, leaving `Sanchez` for [`Description`](#description).
 
@@ -48,7 +48,7 @@ Another optional argument, this one behaves much the same as [`Author`](#author)
 
 ## Event Handlers
 
-Kaleidoscope plugins have several event handlers, special methods the plugin system calls at certain times during each keyboard cycle. Implementing these methods is how your plugin will augment keyboard behavior.
+Kaleidoscope plugins have several event handlers, special methods the plugin system calls at certain times during each keyboard cycle. Implementing these methods is how your plugin will augment keyboard behavior. (Taken directly from the [glossary](https://github.com/keyboardio/Kaleidoscope/blob/master/doc/glossary.md))
 
  - `onSetup`: Run once, when the plugin is initialised during
    `Kaleidoscope.setup()`.

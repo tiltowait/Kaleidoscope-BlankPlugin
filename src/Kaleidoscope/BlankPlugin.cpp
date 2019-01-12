@@ -1,6 +1,6 @@
 /* -*- mode: c++ -*-
- * Kaleidoscope-MyPlugin - <DESCRIPTION>
- * Copyright (C) 2019 <AUTHOR>
+ * Kaleidoscope-BlankPlugin - 
+ * Copyright (C) 2019 
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,43 +16,43 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <Kaleidoscope-MyPlugin.h>
+#include <Kaleidoscope-BlankPlugin.h>
 
 namespace kaleidoscope {
 namespace plugin {
 
-// MyPlugin
+// BlankPlugin
 
 // Member variables.
-bool MyPlugin::disabled_ = false;
+bool BlankPlugin::disabled_ = false;
 
 // Basic plugin status functions.
 
 // Enable the plugin.
-void MyPlugin::enable() {
+void BlankPlugin::enable() {
   disabled_ = false;
 }
 
 // Disable the plugin.
-void MyPlugin::disable() {
+void BlankPlugin::disable() {
   disabled_ = true;
 }
 
 // Returns true if the plugin is enabled.
-bool MyPlugin::active() {
+bool BlankPlugin::active() {
   return !disabled_;
 }
 
 // Event handlers.
 
 // Runs once, when the plugin is initialized during Kaleidoscope.setup().
-EventHandlerResult MyPlugin::onSetup() {
+EventHandlerResult BlankPlugin::onSetup() {
   // Code goes here.
   return EventHandlerResult::OK;
 }
 
 // Run as the first thing at the start of each cycle.
-EventHandlerResult MyPlugin::beforeEachCycle() {
+EventHandlerResult BlankPlugin::beforeEachCycle() {
   if(disabled_) {
     return EventHandlerResult::OK;
   }
@@ -63,7 +63,7 @@ EventHandlerResult MyPlugin::beforeEachCycle() {
 // Run for every non-idle key, in each cycle the key isn't idle in. If a key
 // gets pressed, released, or is held, it is not considered idle, and this
 // event handler will run for it too.
-EventHandlerResult MyPlugin::onKeyswitchEvent(Key &mapped_key, byte row,
+EventHandlerResult BlankPlugin::onKeyswitchEvent(Key &mapped_key, byte row,
                                               byte col, uint8_t key_state) {
   if(disabled_) {
     return EventHandlerResult::OK;
@@ -74,7 +74,7 @@ EventHandlerResult MyPlugin::onKeyswitchEvent(Key &mapped_key, byte row,
 
 // Runs each cycle right before sending the various reports (keys pressed, mouse
 // events, etc) to the host.
-EventHandlerResult MyPlugin::beforeReportingState() {
+EventHandlerResult BlankPlugin::beforeReportingState() {
   if(disabled_) {
     return EventHandlerResult::OK;
   }
@@ -83,7 +83,7 @@ EventHandlerResult MyPlugin::beforeReportingState() {
 }
 
 // Runs at the very end of each cycle.
-EventHandlerResult MyPlugin::afterEachCycle() {
+EventHandlerResult BlankPlugin::afterEachCycle() {
   if(disabled_) {
     return EventHandlerResult::OK;
   }
@@ -107,3 +107,5 @@ Key ProperShifting::legacyEventHandler(Key mapped_key, byte row, byte col, uint8
 
 }  // namespace plugin
 }  // namespace kaleidoscope
+
+kaleidoscope::plugin::BlankPlugin BlankPlugin;

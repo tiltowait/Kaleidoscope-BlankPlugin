@@ -1,4 +1,4 @@
-# Kaleidoscope-MyPlugin
+# Kaleidoscope-BlankPlugin
 
 A blank plugin template for [Kaleidoscope](https://github.com/keyboardio/Kaleidoscope). Provides everything needed to easily get started writing a new plugin, including a utility for rapid rename.
 
@@ -17,7 +17,7 @@ The name of the new plugin. Note that this *must* be a single word. Also, you sh
 - **Good:** `FooBar`
 - **Bad:** `Foo Bar`, `Kaleidoscope-FooBar`
 
-Your plugin [files](#files) will be renamed to fit the specified plugin name. For instance, `Kaleidoscope-MyPlugin.h` will become `Kaleidoscope-FooBar.h`.
+Your plugin [files](#files) will be renamed to fit the specified plugin name. For instance, `Kaleidoscope-BlankPlugin.h` will become `Kaleidoscope-FooBar.h`.
 
 ### `Author`
 
@@ -34,15 +34,15 @@ Another optional argument, this one behaves much the same as [`Author`](#author)
 
 ## Files
 
-### `Kaleidoscope-MyPlugin.h`
+### `Kaleidoscope-BlankPlugin.h`
 
 > The base header for your plugin. It shouldn't have any code; instead, it should simply `#include Kaleidoscope/Plugin.h`.
 
-### `MyPlugin.h`
+### `BlankPlugin.h`
 
 > The main header for your plugin.
 
-### `MyPlugin.cpp`
+### `BlankPlugin.cpp`
 
 > Where all the magic happens.
 

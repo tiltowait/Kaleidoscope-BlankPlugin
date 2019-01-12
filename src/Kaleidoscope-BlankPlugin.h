@@ -1,6 +1,6 @@
 /* -*- mode: c++ -*-
- * Kaleidoscope-MyPlugin - <DESCRIPTION>
- * Copyright (C) 2019 <AUTHOR>
+ * Kaleidoscope-BlankPlugin - 
+ * Copyright (C) 2019 
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,4 +18,4 @@
 
 #pragma once
 
-#include "Kaleidoscope/MyPlugin.h"
+#include "Kaleidoscope/BlankPlugin.h"

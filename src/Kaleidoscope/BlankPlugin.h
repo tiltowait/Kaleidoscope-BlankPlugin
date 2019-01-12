@@ -1,6 +1,6 @@
 /* -*- mode: c++ -*-
- * Kaleidoscope-MyPlugin - <DESCRIPTION>
- * Copyright (C) 2019 <AUTHOR>
+ * Kaleidoscope-BlankPlugin - 
+ * Copyright (C) 2019 
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@
 namespace kaleidoscope {
 namespace plugin {
 
-class MyPlugin : public kaleidoscope::Plugin {
+class BlankPlugin : public kaleidoscope::Plugin {
   public:
     // Basic plugin status functions.
     static void enable();
@@ -53,4 +53,4 @@ class MyPlugin : public kaleidoscope::Plugin {
 }  // namespace plugin
 }  // namespace kaleidoscope
 
-extern kaleidoscope::plugin::MyPlugin MyPlugin;
+extern kaleidoscope::plugin::BlankPlugin BlankPlugin;

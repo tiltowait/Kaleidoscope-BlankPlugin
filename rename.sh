@@ -16,14 +16,18 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-if [ $# -eq 0 ]  # No arguments; print instructions.
-then
+function print_instructions {
   echo "rename.sh - Rename plugin files and components."
   echo "Usage: ./rename <new_plugin_name> [Author] [Description]"
   echo
   echo "NOTES: Omit the \"Kaleidoscope-\" prefix."
   echo "       The plugin name must be a single word."
   echo "       [Author] and [Description] should be enclosed in quotes."
+}
+
+if [ $# -eq 0 ] || [ $# -lt 2 ]  # No or too many arguments; print instructions.
+then
+  print_instructions
 else  # We at least have the new plugin name.
   if [ ! -z "$2" ]  # Store author, if supplied.
   then
@@ -33,7 +37,6 @@ else  # We at least have the new plugin name.
   if [ ! -z "$3" ]  # Store description, if supplied.
   then
     description=$(printf %q "$3")
-    echo $description
   fi
 
   new_plugin_name=$1  # No quotes, since the plugin name must be a single word.

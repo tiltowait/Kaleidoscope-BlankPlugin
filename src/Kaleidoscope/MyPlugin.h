@@ -28,7 +28,7 @@ class MyPlugin : public kaleidoscope::Plugin {
     // Basic plugin status functions.
     static void enable();
     static void disable();
-    static void active();
+    static bool active();
 
     // Event handlers. Delete what you don't need.
     EventHandlerResult onSetup();

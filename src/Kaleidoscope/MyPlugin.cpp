@@ -64,7 +64,7 @@ EventHandlerResult MyPlugin::beforeEachCycle() {
 // gets pressed, released, or is held, it is not considered idle, and this
 // event handler will run for it too.
 EventHandlerResult MyPlugin::onKeyswitchEvent(Key &mapped_key, byte row,
-                                              byte col, int8_t key_state) {
+                                              byte col, uint8_t key_state) {
   if(disabled_) {
     return EventHandlerResult::OK;
   }

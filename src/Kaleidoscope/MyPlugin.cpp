@@ -43,9 +43,12 @@ void MyPlugin::active() {
   return !disabled_;
 }
 
+// Event handlers.
+
 // Runs once, when the plugin is initialized during Kaleidoscope.setup().
 EventHandlerResult MyPlugin::onSetup() {
   // Code goes here.
+  return EventHandlerResult::OK;
 }
 
 // Run as the first thing at the start of each cycle.
@@ -53,8 +56,8 @@ EventHandlerResult MyPlugin::beforeEachCycle() {
   if(disabled_) {
     return EventHandlerResult::OK;
   }
-
   // Code goes here.
+  return EventHandlerResult::OK;
 }
 
 // Run for every non-idle key, in each cycle the key isn't idle in. If a key
@@ -65,8 +68,8 @@ EventHandlerResult MyPlugin::onKeyswitchEvent(Key &mapped_key, byte row,
   if(disabled_) {
     return EventHandlerResult::OK;
   }
-
   // Code goes here.
+  return EventHandlerResult::OK;
 }
 
 // Runs each cycle right before sending the various reports (keys pressed, mouse
@@ -76,6 +79,7 @@ EventHandlerResult MyPlugin::beforeReportingState() {
     return EventHandlerResult::OK;
   }
   // Code goes here.
+  return EventHandlerResult::OK;
 }
 
 // Runs at the very end of each cycle.
@@ -84,6 +88,7 @@ EventHandlerResult MyPlugin::afterEachCycle() {
     return EventHandlerResult::OK;
   }
   // Code goes here.
+  return EventHandlerResult::OK;
 }
 
 }  // namespace plugin

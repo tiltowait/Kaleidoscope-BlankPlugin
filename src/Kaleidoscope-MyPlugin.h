@@ -1,6 +1,6 @@
 /* -*- mode: c++ -*-
- * Kaleidoscope-MyPlugin - Does something ...
- * Copyright (C) 2019 J P Codington
+ * Kaleidoscope-MyPlugin - <DESCRIPTION>
+ * Copyright (C) 2019 <AUTHOR>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

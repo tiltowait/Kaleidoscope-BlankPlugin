@@ -57,7 +57,8 @@ else  # We at least have the new plugin name.
   fi
 
   # Change occurrences of 'MyPlugin' to $new_plugin_name
-  for file in src/$prefix-$new_plugin_name.h\
+  for file in library.properties\
+              src/$prefix-$new_plugin_name.h\
               src/Kaleidoscope/$new_plugin_name.h\
               src/Kaleidoscope/$new_plugin_name.cpp
   do

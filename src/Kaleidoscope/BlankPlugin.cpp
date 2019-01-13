@@ -96,10 +96,13 @@ void BlankPlugin::begin() {
   Kaleidoscope.useEventHandlerHook(legacyEventHandler);
 }
 
-Key BlankPlugin::legacyEventHandler(Key mapped_key, byte row, byte col, uint8_t keyState) {
-  EventHandlerResult r = ::BlankPlugin.onKeyswitchEvent(mapped_key, row, col, keyState);
-  if (r == EventHandlerResult::OK)
+Key BlankPlugin::legacyEventHandler(Key mapped_key, byte row, byte col,
+                                    uint8_t keyState) {
+  EventHandlerResult r = ::BlankPlugin.onKeyswitchEvent(mapped_key, row, col,
+                                                        keyState);
+  if (r == EventHandlerResult::OK) {
     return mapped_key;
+  }
   return Key_NoKey;
 }
 #endif

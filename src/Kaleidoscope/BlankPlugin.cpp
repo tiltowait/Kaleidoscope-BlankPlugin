@@ -92,12 +92,12 @@ EventHandlerResult BlankPlugin::afterEachCycle() {
 
 // Legacy V1 API.
 #if KALEIDOSCOPE_ENABLE_V1_PLUGIN_API
-void ProperShifting::begin() {
+void BlankPlugin::begin() {
   Kaleidoscope.useEventHandlerHook(legacyEventHandler);
 }
 
-Key ProperShifting::legacyEventHandler(Key mapped_key, byte row, byte col, uint8_t keyState) {
-  EventHandlerResult r = ::ProperShifting.onKeyswitchEvent(mapped_key, row, col, keyState);
+Key BlankPlugin::legacyEventHandler(Key mapped_key, byte row, byte col, uint8_t keyState) {
+  EventHandlerResult r = ::BlankPlugin.onKeyswitchEvent(mapped_key, row, col, keyState);
   if (r == EventHandlerResult::OK)
     return mapped_key;
   return Key_NoKey;

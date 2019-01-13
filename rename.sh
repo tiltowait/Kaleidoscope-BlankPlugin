@@ -25,7 +25,7 @@ function print_instructions {
   echo "       [Author] and [Description] should be enclosed in quotes."
 }
 
-if [ $# -eq 0 ] || [ $# -gt 2 ]  # No or too many arguments; print instructions.
+if [ $# -eq 0 ] || [ $# -gt 3 ]  # No or too many arguments; print instructions.
 then
   print_instructions
 else  # We at least have the new plugin name.

@@ -41,7 +41,7 @@ else  # We at least have the new plugin name.
 
   new_plugin_name=$1  # No quotes, since the plugin name must be a single word.
   prefix="Kaleidoscope"
-  old_plugin_name="MyPlugin"
+  old_plugin_name="BlankPlugin"
 
   # Rename the files.
   mv src/$prefix-$old_plugin_name.h src/$prefix-$new_plugin_name.h
@@ -56,13 +56,13 @@ else  # We at least have the new plugin name.
     sed="sed -i ''"
   fi
 
-  # Change occurrences of 'MyPlugin' to $new_plugin_name
+  # Change occurrences of 'BlankPlugin' to $new_plugin_name
   for file in library.properties\
               src/$prefix-$new_plugin_name.h\
               src/Kaleidoscope/$new_plugin_name.h\
               src/Kaleidoscope/$new_plugin_name.cpp
   do
-    eval $sed s/MyPlugin/$new_plugin_name/g $file
+    eval $sed s/$old_plugin_name/$new_plugin_name/g $file
     eval $sed "s/\<AUTHOR\>/$author/g" $file
     eval $sed "s/\<DESCRIPTION\>/$description/g" $file
   done

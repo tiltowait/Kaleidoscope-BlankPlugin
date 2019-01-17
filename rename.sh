@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # rename.sh - Rename Kaleidoscope plugin files and components.
 # Copyright (C) 2019 Jared Lindsay

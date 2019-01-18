@@ -39,14 +39,6 @@ class BlankPlugin : public kaleidoscope::Plugin {
   
   private:
     static bool disabled_;
-
-// Legacy V1 API.
-#if KALEIDOSCOPE_ENABLE_V1_PLUGIN_API
- protected:
-  void begin();
-  static Key legacyEventHandler(Key mapped_key, byte row, byte col,
-                                uint8_t keyState);
-#endif
 };
 
 

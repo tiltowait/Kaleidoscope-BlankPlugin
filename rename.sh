@@ -68,7 +68,7 @@ else  # We at least have the new plugin name.
   done
 
   # Add author, maintainer, and sentence into library.properties
-  eval $sed "s/author=/author=$author/g" library.properties
-  eval $sed "s/maintainer=/maintainer=$author/g" library.properties
-  eval $sed "s/sentence=/sentence=$description/g" library.properties
+  #eval $sed "s/author=/author=$author/g" library.properties
+  #eval $sed "s/maintainer=/maintainer=$author/g" library.properties
+  #eval $sed "s/sentence=/sentence=$description/g" library.properties
 fi

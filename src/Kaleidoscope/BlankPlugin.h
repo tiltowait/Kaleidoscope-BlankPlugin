@@ -1,6 +1,6 @@
 // -*- mode: c++ -*-
-// Kaleidoscope-BlankPlugin - 
-// Copyright (C) 2019 
+// Kaleidoscope-BlankPlugin -- <DESCRIPTION>
+// Copyright (C) 2019 <AUTHOR>
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -36,7 +36,7 @@ class BlankPlugin : public kaleidoscope::Plugin {
                                         uint8_t key_state);
     EventHandlerResult beforeReportingState();
     EventHandlerResult afterEachCycle();
-  
+
   private:
     static bool disabled_;
 };

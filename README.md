@@ -21,7 +21,7 @@ Your plugin [files](#files) will be renamed to fit the specified plugin name. Fo
 
 ### `Author`
 
-An optional argument, `Author` will replace the `<AUTHOR>` line near the beginning of each file. Additionally, `Author` should be enclosed in spaces if it's longer than one word.
+An optional argument, `Author` will replace the `<AUTHOR>` line near the beginning of each file. Additionally, `Author` should be enclosed in quotes if it's longer than one word.
 
 - **Good:** `"Billy Sanchez"`
 - **Bad:** `Billy Sanchez`

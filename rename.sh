@@ -70,4 +70,7 @@ else  # We at least have the new plugin name.
   echo 'Your files are now set up. You should want run the following commands:'
   echo '  rm -rf README.md rename.sh .git'
   echo '  git init'
+  echo
+  echo 'You shuld also rename the enclosing directory to reflect the name of'
+  echo 'your new plugin.'
 fi

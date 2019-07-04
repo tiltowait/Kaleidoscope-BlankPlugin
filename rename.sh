@@ -67,8 +67,7 @@ else  # We at least have the new plugin name.
     eval $sed "s/\<DESCRIPTION\>/$description/g" $file
   done
 
-  # Add author, maintainer, and sentence into library.properties
-  #eval $sed "s/author=/author=$author/g" library.properties
-  #eval $sed "s/maintainer=/maintainer=$author/g" library.properties
-  #eval $sed "s/sentence=/sentence=$description/g" library.properties
+  echo 'Your files are now set up. You should want run the following commands:'
+  echo '  rm -rf README.md rename.sh .git'
+  echo '  git init'
 fi
